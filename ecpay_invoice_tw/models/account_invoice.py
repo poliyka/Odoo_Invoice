@@ -68,7 +68,7 @@ class ECPAYINVOICEInherit(models.Model):
         auto_invoice = self.env['ir.config_parameter'].sudo().get_param('ecpay_invoice_tw.auto_invoice')
         # 如果發票為折讓，則不自動產生電子發票
         if auto_invoice == 'automatic':
-            if self.type not in ['in_refund', 'out_refund']:
+            if self.move_type not in ['in_refund', 'out_refund']:
                 self.create_ecpay_invoice()
             elif self.is_refund is True:
                 self.run_refund()

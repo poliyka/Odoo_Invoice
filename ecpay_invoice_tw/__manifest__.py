@@ -25,7 +25,7 @@
     ],
     'external_dependencies': {
         'python': [
-            'ecpay_invoice'
+            'ecpay_invoice3'
         ],
         'bin': []
     },
